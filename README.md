@@ -157,15 +157,10 @@ Design/AI   : Figma, Photoshop, Illustrator, Cursor, Copilot, Gemini, ChatGPT
 <p align="center">
   <img src="https://raw.githubusercontent.com/mattshade/mattshade/main/assets/icons/activity.svg" width="18" alt="" />
   <strong><code style="color:#bef264">build log</code></strong>
-  <code style="color:#5ec4dc">// lime snake on cyan grid</code>
 </p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mattshade/mattshade/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mattshade/mattshade/output/github-snake.svg" />
-    <img alt="Contribution snake" src="https://raw.githubusercontent.com/mattshade/mattshade/output/github-snake-dark.svg" width="100%" />
-  </picture>
+  <img alt="Contribution snake" src="https://raw.githubusercontent.com/mattshade/mattshade/main/assets/contribution-snake.png" width="100%" />
 </p>
 
 <p align="center">

@@ -12,12 +12,27 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
       - uses: Platane/snk@v3
         with:
           github_user_name: mattshade
           outputs: |
-            dist/github-snake.svg?color_snake=5ec4dc&color_dots=d0d7de,9ec4dc,5ec4dc,3a9fbf,bef264
-            dist/github-snake-dark.svg?color_snake=bef264&color_dots=21262d,1a3348,2d5570,5ec4dc,bef264
+            dist/github-snake.svg?color_snake=5ec4dc&color_dots=9ca3af,c4e8f5,5ec4dc,3a9fbf,bef264
+            dist/github-snake-dark.svg?color_snake=bef264&color_dots=3d444d,1a4a62,2d5570,5ec4dc,bef264
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Inline snake colors for GitHub img rendering
+        run: node scripts/inline-snake-colors.mjs
+
+      - name: Rasterize snake PNG fallback
+        run: |
+          npm install --prefix scripts sharp
+          node scripts/rasterize-snake.mjs
+          cp dist/github-snake-dark.png assets/contribution-snake.png
 
       - uses: crazy-max/ghaction-github-pages@v5
         with:
@@ -25,3 +40,11 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit snake PNG to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/contribution-snake.png
+          git diff --staged --quiet || git commit -m "Update contribution snake PNG"
+          git push
