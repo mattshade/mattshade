@@ -1,0 +1,30 @@
+name: Update GitHub Stats
+
+on:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch stats cards
+        run: |
+          curl -fsSL \
+            "https://github-readme-stats.shion.dev/api?username=mattshade&show_icons=true&theme=dark&bg_color=0D1117&title_color=BEF264&text_color=F3F4F6&icon_color=5EC4DC&hide_border=true&include_all_commits=true" \
+            -o assets/github-stats.svg
+          curl -fsSL \
+            "https://github-readme-streak-stats.herokuapp.com/?user=mattshade&theme=dark&background=0D1117&border=5EC4DC&stroke=5EC4DC&ring=BEF264&fire=BEF264&currStreakLabel=BEF264&sideLabels=8B949E&dates=6E7681" \
+            -o assets/github-streak.svg
+
+      - name: Commit updated cards
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update GitHub stats cards"
+          file_pattern: assets/github-stats.svg assets/github-streak.svg

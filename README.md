@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.mattshade.com">
-    <img src="https://raw.githubusercontent.com/mattshade/mattshade/main/banner.svg" alt="Matt Shade - Engineering and Design" width="100%" />
+    <img src="https://raw.githubusercontent.com/mattshade/mattshade/main/banner.png" alt="Matt Shade - Engineering and Design" width="100%" />
   </a>
 </p>
 
@@ -154,23 +154,15 @@ Design/AI   : Figma, Photoshop, Illustrator, Cursor, Copilot, Gemini, ChatGPT
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mattshade/mattshade/output/github-snake-ocean.gif" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mattshade/mattshade/output/github-snake.svg" />
-    <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/mattshade/mattshade/output/github-snake-ocean.gif" width="100%" />
-  </picture>
-</p>
-
-<p align="center">
-  <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mattshade/mattshade/output/github-snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mattshade/mattshade/output/github-snake.svg" />
-    <img alt="Contribution snake grid" src="https://raw.githubusercontent.com/mattshade/mattshade/output/github-snake-dark.svg" width="100%" />
+    <img alt="Contribution snake" src="https://raw.githubusercontent.com/mattshade/mattshade/output/github-snake-dark.svg" width="100%" />
   </picture>
 </p>
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=mattshade&show_icons=true&theme=transparent&bg_color=0a0a0b&title_color=bef264&text_color=f3f4f6&icon_color=5ec4dc&hide_border=true&include_all_commits=true" alt="GitHub stats" />
-  <img height="165" src="https://github-readme-streak-stats.herokuapp.com/?user=mattshade&theme=transparent&background=0a0a0b&border=5ec4dc&stroke=5ec4dc&ring=bef264&fire=bef264&currStreakLabel=bef264&sideLabels=f3f4f6&dates=9ca3af" alt="GitHub streak" />
+  <img height="165" src="https://raw.githubusercontent.com/mattshade/mattshade/main/assets/github-stats.svg" alt="GitHub stats" />
+  <img height="165" src="https://raw.githubusercontent.com/mattshade/mattshade/main/assets/github-streak.svg" alt="GitHub streak" />
 </p>
 
 ---
