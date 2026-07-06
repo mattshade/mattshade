@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./banner.svg" alt="Matt Shade - Engineering & Design" width="100%" />
+  <img src="https://raw.githubusercontent.com/mattshade/mattshade/main/banner.svg" alt="Matt Shade - Engineering & Design" width="100%" />
 </p>
 
 <p align="center">
