@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.mattshade.com">
-    <img src="https://raw.githubusercontent.com/mattshade/mattshade/main/banner.gif" alt="Matt Shade - Engineering and Design" width="100%" />
+    <img src="https://raw.githubusercontent.com/mattshade/mattshade/main/banner-aviary.gif" alt="Matt Shade - Engineering and Design" width="100%" />
   </a>
 </p>
 

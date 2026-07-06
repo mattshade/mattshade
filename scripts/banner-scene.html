@@ -26,6 +26,7 @@
       top: 0;
       width: 480px;
       height: 260px;
+      background: #0a0a0b;
     }
     .overlay {
       position: absolute;
@@ -201,84 +202,87 @@
       return p;
     }
 
-    function addCreaseLines(parent, segments, color, opacity) {
+    function addCreaseLines(parent, segments, color) {
       const pos = [];
       for (const [ax, ay, az, bx, by, bz] of segments) pos.push(ax, ay, az, bx, by, bz);
       const geo = new THREE.BufferGeometry();
       geo.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
       parent.add(new THREE.LineSegments(geo, new THREE.LineBasicMaterial({
-        color, transparent: true, opacity, depthWrite: false, toneMapped: false,
+        color, depthWrite: true, toneMapped: false,
       })));
     }
 
-    function addPartMesh(parent, geo, fillColor, accentColor, fillOpacity, edgeOpacity, creaseAngle) {
+    function addPartMesh(parent, geo, fillColor, accentColor, creaseAngle) {
       parent.add(new THREE.Mesh(geo, new THREE.MeshBasicMaterial({
-        color: fillColor, transparent: true, opacity: fillOpacity, side: THREE.DoubleSide, depthWrite: true, toneMapped: false,
+        color: fillColor, side: THREE.DoubleSide, depthWrite: true, toneMapped: false,
       })));
       parent.add(new THREE.LineSegments(
         new THREE.EdgesGeometry(geo, creaseAngle),
-        new THREE.LineBasicMaterial({ color: accentColor, transparent: true, opacity: edgeOpacity, depthWrite: false, toneMapped: false }),
+        new THREE.LineBasicMaterial({ color: accentColor, depthWrite: true, toneMapped: false }),
       ));
     }
 
     function createArticulatedOrigamiBird(detail = 'sculptural') {
       const root = new THREE.Group();
-      const fillOpacity = detail === 'sculptural' ? 0.9 : 0.84;
-      const edgeOpacity = detail === 'sculptural' ? 0.72 : 0.62;
       const crease = detail === 'sculptural' ? 16 : 20;
       const wingSpreadAngle = 0.42;
-      const creaseOpacity = edgeOpacity * 0.6;
 
       const body = new THREE.Group();
-      addPartMesh(body, mergeParts(buildCraneBodyParts()), FILL, ACCENT, fillOpacity, edgeOpacity, crease);
+      addPartMesh(body, mergeParts(buildCraneBodyParts()), FILL, ACCENT, crease);
       addCreaseLines(body, [
         [0, 0.16, 0, 0, 0.02, 0.09],
         [0, 0.16, 0, 0, 0.02, -0.09],
         [-0.065, 0.09, 0, 0.065, 0.09, 0],
         [0, 0.16, 0, 0, -0.04, 0],
-      ], ACCENT, creaseOpacity);
+      ], ACCENT);
       root.add(body);
 
       const neck = new THREE.Group();
       neck.position.set(0, 0.08, 0.09);
-      addPartMesh(neck, mergeParts(buildCraneNeckParts()), FILL, ACCENT, fillOpacity, edgeOpacity, crease - 2);
+      addPartMesh(neck, mergeParts(buildCraneNeckParts()), FILL, ACCENT, crease - 2);
       body.add(neck);
 
       const head = new THREE.Group();
       head.position.set(0, 0.3, 0.2);
       head.rotation.x = 0.55;
-      addPartMesh(head, mergeParts(buildCraneHeadParts()), FILL, ACCENT, fillOpacity, edgeOpacity * 1.08, crease - 4);
+      addPartMesh(head, mergeParts(buildCraneHeadParts()), FILL, ACCENT, crease - 4);
       neck.add(head);
 
       const leftWing = new THREE.Group();
       leftWing.position.set(-0.065, 0.1, 0);
       leftWing.rotation.order = 'YXZ';
       leftWing.rotation.x = wingSpreadAngle;
-      addPartMesh(leftWing, mergeParts(buildCraneWingParts(-1)), FILL, ACCENT, fillOpacity, edgeOpacity, crease);
-      addCreaseLines(leftWing, [[0, 0, 0, -0.42, 0.14, 0.02]], ACCENT, creaseOpacity);
+      addPartMesh(leftWing, mergeParts(buildCraneWingParts(-1)), FILL, ACCENT, crease);
+      addCreaseLines(leftWing, [[0, 0, 0, -0.42, 0.14, 0.02]], ACCENT);
       body.add(leftWing);
 
       const rightWing = new THREE.Group();
       rightWing.position.set(0.065, 0.1, 0);
       rightWing.rotation.order = 'YXZ';
       rightWing.rotation.x = wingSpreadAngle;
-      addPartMesh(rightWing, mergeParts(buildCraneWingParts(1)), FILL, ACCENT, fillOpacity, edgeOpacity, crease);
-      addCreaseLines(rightWing, [[0, 0, 0, 0.42, 0.14, 0.02]], ACCENT, creaseOpacity);
+      addPartMesh(rightWing, mergeParts(buildCraneWingParts(1)), FILL, ACCENT, crease);
+      addCreaseLines(rightWing, [[0, 0, 0, 0.42, 0.14, 0.02]], ACCENT);
       body.add(rightWing);
 
       const tail = new THREE.Group();
       tail.position.set(0, 0.08, -0.09);
-      addPartMesh(tail, mergeParts(buildCraneTailParts()), FILL, ACCENT, fillOpacity * 0.95, edgeOpacity, crease);
+      addPartMesh(tail, mergeParts(buildCraneTailParts()), FILL, ACCENT, crease);
       body.add(tail);
 
       return { root, leftWing, rightWing, wingSpreadAngle };
     }
 
     const canvas = document.getElementById('cv');
-    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+    const renderer = new THREE.WebGLRenderer({
+      canvas,
+      antialias: false,
+      alpha: false,
+      preserveDrawingBuffer: true,
+      powerPreference: 'high-performance',
+    });
     renderer.setSize(480, 260, false);
-    renderer.setPixelRatio(2);
-    renderer.setClearColor(0x000000, 0);
+    renderer.setPixelRatio(1);
+    renderer.setClearColor(0x0a0a0b, 1);
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(42, 480 / 260, 0.1, 100);

@@ -14,11 +14,11 @@ const threeDir = path.resolve(__dirname, '../../../../../PORTFOLIO1.2/node_modul
 const { chromium } = await import(playwrightRoot);
 
 const htmlPath = path.resolve(__dirname, 'banner-scene.html');
-const outGif = path.resolve(__dirname, '../banner.gif');
+const outGif = path.resolve(__dirname, '../banner-aviary.gif');
 const outPng = path.resolve(__dirname, '../banner.png');
-const FRAMES = 48;
-const FRAME_DELAY_MS = 42;
-const GIF_COLORS = 128;
+const FRAMES = 60;
+const FRAME_DELAY_MS = 40;
+const GIF_COLORS = 64;
 
 const server = http.createServer((req, res) => {
   const url = req.url?.split('?')[0] ?? '/';
@@ -50,12 +50,17 @@ const page = await browser.newPage({ viewport: { width: 900, height: 260 }, devi
 await page.goto(`http://127.0.0.1:${port}/banner-scene.html`);
 await page.waitForFunction(() => window.__bannerReady === true, null, { timeout: 15000 });
 
-const frames = [];
+async function captureFrame(phase) {
+  await page.evaluate(async (p) => {
+    window.renderBannerFrame(p);
+    await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+  }, phase);
+  return PNG.sync.read(await page.locator('body').screenshot({ type: 'png' }));
+}
 
+const frames = [];
 for (let i = 0; i < FRAMES; i += 1) {
-  const phase = i / FRAMES;
-  await page.evaluate((p) => window.renderBannerFrame(p), phase);
-  frames.push(PNG.sync.read(await page.screenshot({ type: 'png' })));
+  frames.push(await captureFrame(i / FRAMES));
 }
 
 const { width, height } = frames[0];
@@ -75,8 +80,11 @@ for (const frame of frames) {
 gif.finish();
 fs.writeFileSync(outGif, Buffer.from(gif.bytes()));
 
-await page.evaluate(() => window.renderBannerFrame(0));
-await page.screenshot({ path: outPng, type: 'png' });
+await page.evaluate(async () => {
+  window.renderBannerFrame(0);
+  await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+});
+await page.locator('body').screenshot({ path: outPng, type: 'png' });
 
 await browser.close();
 server.close();
