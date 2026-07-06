@@ -304,23 +304,50 @@
     flock.root.scale.setScalar(0.95);
     scene.add(flock.root);
 
-    function animateWing(wing, spread, t, phase) {
-      wing.rotation.x = spread + Math.sin(t * 2.2 + phase) * 0.08;
+    const heroBase = { x: 0.18, y: 0.38, z: 0 };
+    const flockBase = { x: 0.88, y: 0.82, z: -0.22 };
+
+    function animateBirds(phase) {
+      const loop = phase * Math.PI * 2;
+
+      animateWing(hero.leftWing, hero.wingSpreadAngle, loop, 0);
+      animateWing(hero.rightWing, hero.wingSpreadAngle, loop, Math.PI * 0.35);
+      animateWing(flock.leftWing, flock.wingSpreadAngle, loop, 1.2);
+      animateWing(flock.rightWing, flock.wingSpreadAngle, loop, 1.2 + Math.PI * 0.35);
+
+      hero.root.position.set(
+        heroBase.x + Math.sin(loop * 0.5) * 0.14,
+        heroBase.y + Math.sin(loop) * 0.05,
+        heroBase.z + Math.cos(loop * 0.5) * 0.04,
+      );
+      hero.root.rotation.set(
+        -0.08 + Math.sin(loop * 0.5) * 0.05,
+        0.45 + Math.sin(loop * 0.25) * 0.08,
+        0.05 + Math.sin(loop) * 0.06,
+      );
+
+      flock.root.position.set(
+        flockBase.x + Math.sin(loop * 0.35 + 1.4) * 0.18,
+        flockBase.y + Math.sin(loop * 0.7 + 0.8) * 0.06,
+        flockBase.z + Math.cos(loop * 0.35 + 1.4) * 0.05,
+      );
+      flock.root.rotation.set(
+        -0.15 + Math.sin(loop * 0.35 + 1.4) * 0.04,
+        0.32 + Math.sin(loop * 0.2 + 0.5) * 0.1,
+        0.1 + Math.sin(loop * 0.7 + 0.8) * 0.08,
+      );
     }
 
-    let t = 0;
-    function render() {
-      t += 0.016;
-      animateWing(hero.leftWing, hero.wingSpreadAngle, t, 0);
-      animateWing(hero.rightWing, hero.wingSpreadAngle, t, Math.PI * 0.35);
-      animateWing(flock.leftWing, flock.wingSpreadAngle, t, 1.2);
-      animateWing(flock.rightWing, flock.wingSpreadAngle, t, 1.2 + Math.PI * 0.35);
-      hero.root.position.y = 0.38 + Math.sin(t * 1.1) * 0.03;
-      flock.root.position.y = 0.82 + Math.sin(t * 1.4 + 1) * 0.025;
-      renderer.render(scene, camera);
-      requestAnimationFrame(render);
+    function animateWing(wing, spread, loop, phase) {
+      wing.rotation.x = spread + Math.sin(loop * 2 + phase) * 0.16;
     }
-    render();
+
+    window.renderBannerFrame = (phase = 0) => {
+      animateBirds(phase);
+      renderer.render(scene, camera);
+    };
+
+    window.renderBannerFrame(0);
     window.__bannerReady = true;
   </script>
 </body>
