@@ -1,4 +1,4 @@
-[![Matt Shade - Engineering and Design](https://raw.githubusercontent.com/mattshade/mattshade/main/assets/profile-banner.png)](https://www.mattshade.com)
+[![Matt Shade - Engineering and Design](https://raw.githubusercontent.com/mattshade/mattshade/main/assets/profile-banner.png?v=2)](https://www.mattshade.com)
 
 <h1 align="center">
   <a href="https://www.mattshade.com">Matt Shade</a>
@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  Director-level engineering & design leader ∑ NBCUniversal ∑ CNBC design systems & platforms
+  Director-level engineering & design leader ù NBCUniversal ù CNBC design systems & platforms
 </p>
 
 <p align="center">
@@ -27,7 +27,7 @@
 
 | | |
 | --- | --- |
-| **Team & Talent** | High-performing engineering cultures ó hiring, mentoring, and scaling leadership teams |
+| **Team & Talent** | High-performing engineering cultures ù hiring, mentoring, and scaling leadership teams |
 | **Platform Scale** | Consolidating legacy systems, modernizing stacks, and reclaiming engineering hours |
 | **AI Leadership** | Custom agentic workflows and hands-on AI enablement for real newsroom problems |
 
@@ -64,7 +64,7 @@
 
 | Project | What it is |
 | --- | --- |
-| [**PORTFOLIO1.2**](https://github.com/mattshade/PORTFOLIO1.2) | Portfolio site ó React, Three.js, design system |
+| [**PORTFOLIO1.2**](https://github.com/mattshade/PORTFOLIO1.2) | Portfolio site ù React, Three.js, design system |
 | [**cnbc-design-system**](https://github.com/mattshade/cnbc-design-system) | Enterprise component library & Storybook |
 | [**shadcnBlocks**](https://github.com/mattshade/shadcnBlocks) | Reusable UI blocks |
 
