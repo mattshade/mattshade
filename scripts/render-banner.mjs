@@ -16,8 +16,8 @@ const { chromium } = await import(playwrightRoot);
 const htmlPath = path.resolve(__dirname, 'banner-scene.html');
 const outGif = path.resolve(__dirname, '../banner.gif');
 const outPng = path.resolve(__dirname, '../banner.png');
-const FRAMES = 36;
-const FRAME_DELAY_MS = 45;
+const FRAMES = 48;
+const FRAME_DELAY_MS = 42;
 const GIF_COLORS = 128;
 
 const server = http.createServer((req, res) => {
@@ -50,19 +50,25 @@ const page = await browser.newPage({ viewport: { width: 900, height: 260 }, devi
 await page.goto(`http://127.0.0.1:${port}/banner-scene.html`);
 await page.waitForFunction(() => window.__bannerReady === true, null, { timeout: 15000 });
 
-const gif = GIFEncoder();
-let width = 0;
-let height = 0;
+const frames = [];
 
 for (let i = 0; i < FRAMES; i += 1) {
   const phase = i / FRAMES;
   await page.evaluate((p) => window.renderBannerFrame(p), phase);
-  const pngBuffer = await page.screenshot({ type: 'png' });
-  const png = PNG.sync.read(pngBuffer);
-  width = png.width;
-  height = png.height;
-  const palette = quantize(png.data, GIF_COLORS);
-  const index = applyPalette(png.data, palette);
+  frames.push(PNG.sync.read(await page.screenshot({ type: 'png' })));
+}
+
+const { width, height } = frames[0];
+const allPixels = new Uint8Array(width * height * 4 * frames.length);
+for (let i = 0; i < frames.length; i += 1) {
+  allPixels.set(frames[i].data, i * frames[i].data.length);
+}
+
+const palette = quantize(allPixels, GIF_COLORS);
+const gif = GIFEncoder();
+
+for (const frame of frames) {
+  const index = applyPalette(frame.data, palette);
   gif.writeFrame(index, width, height, { palette, delay: FRAME_DELAY_MS });
 }
 

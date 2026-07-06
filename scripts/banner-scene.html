@@ -20,13 +20,6 @@
       background-size: 40px 40px;
       pointer-events: none;
     }
-    body::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 72% 38%, rgba(122, 154, 110, 0.14) 0%, transparent 58%);
-      pointer-events: none;
-    }
     #cv {
       position: absolute;
       right: 0;
@@ -307,39 +300,41 @@
     const heroBase = { x: 0.18, y: 0.38, z: 0 };
     const flockBase = { x: 0.88, y: 0.82, z: -0.22 };
 
+    // Integer harmonics only (k * T where T = phase * 2π) so phase 0 === phase 1.
     function animateBirds(phase) {
-      const loop = phase * Math.PI * 2;
+      const t = phase * Math.PI * 2;
 
-      animateWing(hero.leftWing, hero.wingSpreadAngle, loop, 0);
-      animateWing(hero.rightWing, hero.wingSpreadAngle, loop, Math.PI * 0.35);
-      animateWing(flock.leftWing, flock.wingSpreadAngle, loop, 1.2);
-      animateWing(flock.rightWing, flock.wingSpreadAngle, loop, 1.2 + Math.PI * 0.35);
+      animateWing(hero.leftWing, hero.wingSpreadAngle, t, 0);
+      animateWing(hero.rightWing, hero.wingSpreadAngle, t, Math.PI * 0.5);
+      animateWing(flock.leftWing, flock.wingSpreadAngle, t, Math.PI * 0.25);
+      animateWing(flock.rightWing, flock.wingSpreadAngle, t, Math.PI * 0.75);
 
       hero.root.position.set(
-        heroBase.x + Math.sin(loop * 0.5) * 0.14,
-        heroBase.y + Math.sin(loop) * 0.05,
-        heroBase.z + Math.cos(loop * 0.5) * 0.04,
+        heroBase.x + Math.sin(t) * 0.11,
+        heroBase.y + Math.cos(t) * 0.04,
+        heroBase.z + Math.sin(t + Math.PI) * 0.03,
       );
       hero.root.rotation.set(
-        -0.08 + Math.sin(loop * 0.5) * 0.05,
-        0.45 + Math.sin(loop * 0.25) * 0.08,
-        0.05 + Math.sin(loop) * 0.06,
+        -0.08 + Math.sin(t) * 0.04,
+        0.45 + Math.cos(t) * 0.06,
+        0.05 + Math.sin(t + Math.PI * 0.5) * 0.05,
       );
 
+      const ft = t + 1.15;
       flock.root.position.set(
-        flockBase.x + Math.sin(loop * 0.35 + 1.4) * 0.18,
-        flockBase.y + Math.sin(loop * 0.7 + 0.8) * 0.06,
-        flockBase.z + Math.cos(loop * 0.35 + 1.4) * 0.05,
+        flockBase.x + Math.sin(ft) * 0.14,
+        flockBase.y + Math.cos(ft) * 0.045,
+        flockBase.z + Math.sin(ft + Math.PI) * 0.035,
       );
       flock.root.rotation.set(
-        -0.15 + Math.sin(loop * 0.35 + 1.4) * 0.04,
-        0.32 + Math.sin(loop * 0.2 + 0.5) * 0.1,
-        0.1 + Math.sin(loop * 0.7 + 0.8) * 0.08,
+        -0.15 + Math.sin(ft) * 0.035,
+        0.32 + Math.cos(ft) * 0.07,
+        0.1 + Math.sin(ft + Math.PI * 0.5) * 0.06,
       );
     }
 
-    function animateWing(wing, spread, loop, phase) {
-      wing.rotation.x = spread + Math.sin(loop * 2 + phase) * 0.16;
+    function animateWing(wing, spread, t, phase) {
+      wing.rotation.x = spread + Math.sin(t * 3 + phase) * 0.13;
     }
 
     window.renderBannerFrame = (phase = 0) => {
