@@ -16,8 +16,9 @@ jobs:
         with:
           github_user_name: mattshade
           outputs: |
-            dist/github-snake.svg?color_snake=bef264&color_dots=161618,2a3d1f,4a6b2e,7a9a4e,bef264
-            dist/github-snake-dark.svg?color_snake=bef264&color_dots=0a0a0b,1a2412,2d4a1a,5a7a3a,bef264
+            dist/github-snake.svg?color_snake=5ec4dc&color_dots=ebedf0,0f1a24,1a3348,2d5570,bef264
+            dist/github-snake-dark.svg?color_snake=bef264&color_dots=0a0a0b,0f1a24,1a3348,2d5570,5ec4dc
+            dist/github-snake-ocean.gif?palette=github-dark&color_snake=bef264&color_dots=0a0a0b,0f1a24,1a3348,5ec4dc,bef264&color_background=0a0a0b
 
       - uses: crazy-max/ghaction-github-pages@v5
         with:
