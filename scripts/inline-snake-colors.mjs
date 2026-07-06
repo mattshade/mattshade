@@ -40,9 +40,12 @@ function inlineSvgVars(svg) {
 
 for (const file of ['github-snake.svg', 'github-snake-dark.svg']) {
   const filePath = path.join(distDir, file);
-  if (!fs.existsSync(filePath)) continue;
+  if (!fs.existsSync(filePath)) {
+    console.warn(`Skipping missing ${file}`);
+    continue;
+  }
   const inlined = inlineSvgVars(fs.readFileSync(filePath, 'utf8'));
-  fs.writeFileSync(filePath, inlined);
-  fs.writeFileSync(path.join(distDir, file.replace('.svg', '-flat.svg')), inlined);
-  console.log(`Inlined colors in ${file}`);
+  const outPath = path.join(distDir, file.replace('.svg', '-flat.svg'));
+  fs.writeFileSync(outPath, inlined);
+  console.log(`Wrote ${path.basename(outPath)}`);
 }
