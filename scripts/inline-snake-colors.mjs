@@ -3,7 +3,11 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const distDir = path.resolve(__dirname, '../dist');
+const buildDir = path.resolve(
+  __dirname,
+  '..',
+  process.env.SNAKE_BUILD_DIR ?? 'dist',
+);
 
 function normalizeColor(value) {
   const trimmed = value.trim();
@@ -39,13 +43,13 @@ function inlineSvgVars(svg) {
 }
 
 for (const file of ['github-snake.svg', 'github-snake-dark.svg']) {
-  const filePath = path.join(distDir, file);
+  const filePath = path.join(buildDir, file);
   if (!fs.existsSync(filePath)) {
     console.warn(`Skipping missing ${file}`);
     continue;
   }
   const inlined = inlineSvgVars(fs.readFileSync(filePath, 'utf8'));
-  const outPath = path.join(distDir, file.replace('.svg', '-flat.svg'));
+  const outPath = path.join(buildDir, file.replace('.svg', '-flat.svg'));
   fs.writeFileSync(outPath, inlined);
   console.log(`Wrote ${path.basename(outPath)}`);
 }

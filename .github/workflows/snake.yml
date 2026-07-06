@@ -25,19 +25,22 @@ jobs:
         with:
           node-version: 20
 
+      - name: Prepare writable snake build directory
+        run: cp -r dist build
+
       - name: Inline snake colors for GitHub img rendering
-        run: node scripts/inline-snake-colors.mjs
+        run: SNAKE_BUILD_DIR=build node scripts/inline-snake-colors.mjs
 
       - name: Rasterize snake PNG fallback
         run: |
           npm install --prefix scripts sharp
-          node scripts/rasterize-snake.mjs
-          cp dist/github-snake-dark.png assets/contribution-snake.png
+          SNAKE_BUILD_DIR=build node scripts/rasterize-snake.mjs
+          cp build/github-snake-dark.png assets/contribution-snake.png
 
       - uses: crazy-max/ghaction-github-pages@v5
         with:
           target_branch: output
-          build_dir: dist
+          build_dir: build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
