@@ -41,7 +41,7 @@
     <tspan fill="#999999">ENGINEERING</tspan><tspan fill="#bef264"> | </tspan><tspan fill="#999999">DESIGN</tspan>
   </text>
 
-  <text x="600" y="188" text-anchor="middle" fill="#bef264" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="72" font-weight="700" letter-spacing="-2">Matt Shade</text>
+  <text x="600" y="188" text-anchor="middle" fill="#bef264" font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="72" font-weight="700" letter-spacing="-2">Matt Shade</text>
 
-  <text x="600" y="232" text-anchor="middle" fill="#9ca3af" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20">AI-powered tools &amp; interfaces ù data into clarity &amp; action</text>
+  <text x="600" y="232" text-anchor="middle" fill="#9ca3af" font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20">AI-powered tools &amp; interfaces &#183; data into clarity &amp; action</text>
 </svg>

@@ -1,4 +1,4 @@
-[![Matt Shade — Engineering & Design](https://raw.githubusercontent.com/mattshade/mattshade/main/assets/profile-banner.png)](https://www.mattshade.com)
+[![Matt Shade - Engineering and Design](https://raw.githubusercontent.com/mattshade/mattshade/main/assets/profile-banner.png)](https://www.mattshade.com)
 
 <h1 align="center">
   <a href="https://www.mattshade.com">Matt Shade</a>
