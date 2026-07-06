@@ -35,7 +35,8 @@ jobs:
         run: |
           npm install --prefix scripts sharp
           SNAKE_BUILD_DIR=build node scripts/rasterize-snake.mjs
-          cp build/github-snake-dark.png assets/contribution-snake.png
+          cp build/github-snake-dark-flat.svg assets/contribution-snake.svg
+          cp build/github-snake-flat.svg assets/contribution-snake-light.svg
 
       - uses: crazy-max/ghaction-github-pages@v5
         with:
@@ -44,8 +45,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit snake PNG to main
+      - name: Commit snake assets to main
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Update contribution snake PNG"
-          file_pattern: assets/contribution-snake.png
+          commit_message: "Update contribution snake assets"
+          file_pattern: assets/contribution-snake.svg assets/contribution-snake-light.svg

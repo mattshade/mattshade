@@ -39,6 +39,12 @@ function inlineSvgVars(svg) {
   for (const [key, value] of Object.entries(vars)) {
     out = out.replaceAll(`var(${key})`, value);
   }
+  if (!out.includes('id="snk-bg"')) {
+    out = out.replace(
+      /(<svg[^>]*>)/,
+      '$1<rect id="snk-bg" x="-16" y="-32" width="880" height="192" fill="#0d1117"/>',
+    );
+  }
   return out;
 }
 
