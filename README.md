@@ -28,12 +28,12 @@
 
 I work as a **bridge person** between complex engineering, user-centered design, and business strategy. I build high-fidelity prototypes and developer tools that align teams, reduce rework, and create operational momentum.
 
-<table>
+<table width="100%">
   <tr>
     <td width="42" valign="top">
       <img src="https://raw.githubusercontent.com/mattshade/mattshade/main/assets/icons/bot.svg" width="28" alt="" />
     </td>
-    <td valign="top">
+    <td width="100%" valign="top">
       <strong><code style="color:#bef264">AI &amp; Enablement</code></strong>
       <ul>
         <li>Shipped custom GenAI agents for newsroom logistics and on-air scheduling.</li>
@@ -46,7 +46,7 @@ I work as a **bridge person** between complex engineering, user-centered design,
     <td width="42" valign="top">
       <img src="https://raw.githubusercontent.com/mattshade/mattshade/main/assets/icons/users.svg" width="28" alt="" />
     </td>
-    <td valign="top">
+    <td width="100%" valign="top">
       <strong><code style="color:#5ec4dc">Systems Leadership</code></strong>
       <ul>
         <li>Scaled engineering groups across NBC News Group, MSNBC, TODAY, and CNBC.</li>
@@ -59,7 +59,7 @@ I work as a **bridge person** between complex engineering, user-centered design,
     <td width="42" valign="top">
       <img src="https://raw.githubusercontent.com/mattshade/mattshade/main/assets/icons/component.svg" width="28" alt="" />
     </td>
-    <td valign="top">
+    <td width="100%" valign="top">
       <strong><code style="color:#bef264">Design Engineering</code></strong>
       <ul>
         <li>Established CNBC's Storybook-based design system and component library.</li>
@@ -108,10 +108,10 @@ Design/AI   : Figma, Photoshop, Illustrator, Cursor, Copilot, Gemini, ChatGPT
 
 ## Highlighted work
 
-<table>
+<table width="100%">
   <tr>
     <td width="42" valign="top"><img src="https://raw.githubusercontent.com/mattshade/mattshade/main/assets/icons/database.svg" width="28" alt="" /></td>
-    <td valign="top">
+    <td width="100%" valign="top">
       <strong>MongoDB DX Copilot</strong><br/>
       Deterministic architecture-review engine for MongoDB data modeling.<br/>
       <sub>Next.js, TypeScript, Tailwind CSS, Zod, Vitest</sub>
@@ -119,7 +119,7 @@ Design/AI   : Figma, Photoshop, Illustrator, Cursor, Copilot, Gemini, ChatGPT
   </tr>
   <tr>
     <td width="42" valign="top"><img src="https://raw.githubusercontent.com/mattshade/mattshade/main/assets/icons/bar-chart.svg" width="28" alt="" /></td>
-    <td valign="top">
+    <td width="100%" valign="top">
       <strong><a href="https://www.mattshade.com/">AI Data Hub</a></strong><br/>
       Interactive data catalog for newsroom and product teams across 8 dataset domains.<br/>
       <sub>Chart.js, modular SharePoint-ready architecture</sub>
@@ -127,7 +127,7 @@ Design/AI   : Figma, Photoshop, Illustrator, Cursor, Copilot, Gemini, ChatGPT
   </tr>
   <tr>
     <td width="42" valign="top"><img src="https://raw.githubusercontent.com/mattshade/mattshade/main/assets/icons/layers.svg" width="28" alt="" /></td>
-    <td valign="top">
+    <td width="100%" valign="top">
       <strong><a href="https://github.com/mattshade/PORTFOLIO1.2">PORTFOLIO1.2</a></strong><br/>
       Portfolio site with origami aviary, design system, and case studies.<br/>
       <sub>React, Three.js, Storybook, Vite</sub>
@@ -135,7 +135,7 @@ Design/AI   : Figma, Photoshop, Illustrator, Cursor, Copilot, Gemini, ChatGPT
   </tr>
   <tr>
     <td width="42" valign="top"><img src="https://raw.githubusercontent.com/mattshade/mattshade/main/assets/icons/component.svg" width="28" alt="" /></td>
-    <td valign="top">
+    <td width="100%" valign="top">
       <strong><a href="https://github.com/mattshade/cnbc-design-system">cnbc-design-system</a></strong><br/>
       Enterprise component library and Storybook documentation.<br/>
     </td>
