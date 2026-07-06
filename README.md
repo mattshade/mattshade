@@ -113,7 +113,7 @@ Design/AI   : Figma, Photoshop, Illustrator, Cursor, Copilot, Gemini, ChatGPT
   <tr>
     <td width="48" valign="top" align="left"><img src="https://raw.githubusercontent.com/mattshade/mattshade/main/assets/icons/database.svg" width="28" height="28" alt="" /></td>
     <td width="772" valign="top">
-      <strong>MongoDB DX Copilot</strong><br/>
+      <strong><a href="https://github.com/matt-shade-nbcuni/mongodb-dx-copilot">MongoDB DX Copilot</a></strong><br/>
       Deterministic architecture-review engine for MongoDB data modeling.<br/>
       <sub>Next.js, TypeScript, Tailwind CSS, Zod, Vitest</sub>
     </td>
