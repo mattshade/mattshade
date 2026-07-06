@@ -1,77 +1,94 @@
-[![Matt Shade - Engineering and Design](https://raw.githubusercontent.com/mattshade/mattshade/main/assets/profile-banner-v2.png)](https://www.mattshade.com)
-
-<h1 align="center">
-  <a href="https://www.mattshade.com">Matt Shade</a>
-</h1>
-
 <p align="center">
-  <a href="https://git.io/typing-svg">
-    <img
-      src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=500&size=22&duration=4000&pause=1200&color=BEF264&center=true&vCenter=true&width=900&lines=Engineering+%26+Design+leader;AI-powered+tools+%26+interfaces;Turn+data+into+clarity+%26+action"
-      alt="Typing animation"
-    />
-  </a>
+  <img src="./banner.svg" alt="Matt Shade - Engineering & Design" width="100%" />
 </p>
 
 <p align="center">
-  Director-level engineering & design leader � NBCUniversal � CNBC design systems & platforms
+  <strong>Systems-oriented builder-leader bridging engineering, design, and operations to turn ambiguity into structured execution.</strong>
 </p>
 
 <p align="center">
-  <i>Designer, Engineer, Foodie.</i>
+  <a href="https://www.mattshade.com/">Portfolio</a> &bull; 
+  <a href="https://www.linkedin.com/in/matt-shade-66125515/">LinkedIn</a> &bull; 
+  <a href="mailto:hellomattshade@gmail.com">Contact</a>
 </p>
 
 ---
 
-### What I build
+## ⚡ The Operating Model
 
-| | |
-| --- | --- |
-| **Team & Talent** | High-performing engineering cultures � hiring, mentoring, and scaling leadership teams |
-| **Platform Scale** | Consolidating legacy systems, modernizing stacks, and reclaiming engineering hours |
-| **AI Leadership** | Custom agentic workflows and hands-on AI enablement for real newsroom problems |
+I operate as a **"bridge person"** between complex engineering, user-centered design, and business strategy. I don't just theorize; I build concrete, high-fidelity prototypes and developer tools that align teams, reduce engineering rework, and establish operational momentum.
 
----
-
-### Stack
-
-![React](https://img.shields.io/badge/React-0a0a0b?style=for-the-badge&logo=react&logoColor=bef264)
-![TypeScript](https://img.shields.io/badge/TypeScript-0a0a0b?style=for-the-badge&logo=typescript&logoColor=bef264)
-![Node.js](https://img.shields.io/badge/Node.js-0a0a0b?style=for-the-badge&logo=nodedotjs&logoColor=bef264)
-![GraphQL](https://img.shields.io/badge/GraphQL-0a0a0b?style=for-the-badge&logo=graphql&logoColor=e2b35a)
-![AWS](https://img.shields.io/badge/AWS-0a0a0b?style=for-the-badge&logo=amazonaws&logoColor=e2b35a)
-![Storybook](https://img.shields.io/badge/Design_Systems-0a0a0b?style=for-the-badge&logo=storybook&logoColor=bef264)
-![Cursor](https://img.shields.io/badge/Cursor-bef264?style=for-the-badge&logo=cursor&logoColor=0a0a0b)
-
----
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mattshade/mattshade/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mattshade/mattshade/output/github-snake.svg" />
-    <img alt="Contribution snake" src="https://raw.githubusercontent.com/mattshade/mattshade/output/github-snake.svg" />
-  </picture>
-</p>
-
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=mattshade&show_icons=true&theme=transparent&bg_color=0a0a0b&title_color=bef264&text_color=f3f4f6&icon_color=bef264&hide_border=true" alt="GitHub stats" />
-  <img height="165" src="https://github-readme-streak-stats.herokuapp.com/?user=mattshade&theme=transparent&background=0a0a0b&border=bef264&stroke=bef264&ring=bef264&fire=bef264&currStreakLabel=bef264&sideLabels=f3f4f6&dates=9ca3af" alt="GitHub streak" />
-</p>
+<table width="100%">
+  <tr>
+    <td width="33%" valign="top">
+      <h3>🤖 AI &amp; Enablement</h3>
+      <ul>
+        <li><strong>GenAI Agents:</strong> Shipped custom agents solving real newsroom logistics and on-air scheduling workflows.</li>
+        <li><strong>Analytics Dashboards:</strong> Built utilization and enablement trackers (ChatGPT, Office Hours telemetry).</li>
+        <li><strong>Enablement Programs:</strong> Led workshops and technical office hours to drive active tool adoption.</li>
+      </ul>
+    </td>
+    <td width="33%" valign="top">
+      <h3>🏗️ Systems Leadership</h3>
+      <ul>
+        <li><strong>Scale Teams:</strong> Recruited and led high-performing engineering groups across NBC News Group.</li>
+        <li><strong>Platform Strategy:</strong> Consolidated 8 disparate video players to 2 global implementations.</li>
+        <li><strong>Legacy Modernization:</strong> Retired monoliths to save hundreds of operational hours.</li>
+      </ul>
+    </td>
+    <td width="33%" valign="top">
+      <h3>🎨 Design Engineering</h3>
+      <ul>
+        <li><strong>Design Systems:</strong> Established CNBC's unified component library using Storybook.</li>
+        <li><strong>Prototype Discovery:</strong> Designed web/iOS flows validating concepts before building.</li>
+        <li><strong>Data Visualization:</strong> Shipped interactive subscription and finance quote flows.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ---
 
-### Featured repos
+## 💼 Career Snapshot & Impact
 
-| Project | What it is |
-| --- | --- |
-| [**PORTFOLIO1.2**](https://github.com/mattshade/PORTFOLIO1.2) | Portfolio site � React, Three.js, design system |
-| [**cnbc-design-system**](https://github.com/mattshade/cnbc-design-system) | Enterprise component library & Storybook |
-| [**shadcnBlocks**](https://github.com/mattshade/shadcnBlocks) | Reusable UI blocks |
+### **NBCUniversal** &bull; Director of AI Engineering
+*Jul 2025 – Apr 2026 &bull; New York, NY*
+* **AI Data Hub:** Architected and shipped an interactive data catalog of 8 major datasets (audience, commerce, streaming, content performance, etc.) featuring advanced search, filters, Chart.js visualizations, and SharePoint-friendly deployment.
+* **Enablement & Adoption:** Shipped custom GenAI newsroom agents and enablement reporting dashboards (licensing, utilization, feature depth analysis) that gave leadership concrete competitive intelligence and teams practical developer tools.
+
+### **NBCUniversal** &bull; Director of Engineering, NBC News Group Digital
+*Oct 2021 – Jul 2025 &bull; New York, NY*
+* **Reliability at Scale:** Scaled multi-disciplinary engineering teams across NBC News, MSNBC, TODAY, and CNBC with a strong culture of developer growth and low attrition.
+* **Modernization:** Consolidated legacy systems and retired massive monoliths, redirecting thousands of engineering hours toward React, TypeScript, and modern CI/CD pipelines.
+
+### **CNBC** &bull; Tech Lead &amp; Senior Interactive Designer
+*Jan 2007 – Oct 2021 &bull; Englewood Cliffs, NJ*
+* **Interactive & Subscriptions:** Managed subscription and interactive visualization engines for CNBC.com, ensuring high-traffic stability during peak market volatility.
+* **Rigor & Craft:** Established the CNBC Design System (Storybook), standardized UX and front-end engineering frameworks, and introduced prototype-driven product discovery.
 
 ---
 
-### Connect
+## 🛠️ Technical Inventory
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-mattshade.com-bef264?style=for-the-badge&logo=googlechrome&logoColor=0a0a0b)](https://www.mattshade.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0a0a0b?style=for-the-badge&logo=linkedin&logoColor=bef264)](https://www.linkedin.com/in/matt-shade-66125515/)
-[![Email](https://img.shields.io/badge/Email-0a0a0b?style=for-the-badge&logo=gmail&logoColor=e2b35a)](mailto:hellomattshade@gmail.com)
+```yml
+Core Competencies : Systems Thinking, Team Building, AI Enablement, Product Discovery, Rapid Prototyping
+Languages         : JavaScript (ES6+), TypeScript, HTML5, CSS3, PHP, SQL
+Frameworks & Libs : React, React Native, Node.js, GraphQL, Storybook, Chart.js, TailwindCSS
+Infrastructure    : GCP, AWS, Docker, Git, CI/CD, Netlify
+Design & Tooling  : Figma, Photoshop, Illustrator, Cursor, Copilot, Gemini, ChatGPT
+```
+
+---
+
+## 📂 Highlighted Projects
+
+### [**MongoDB DX Copilot**](file:///Users/mattshade/README.md)
+*A deterministic architecture-review engine for MongoDB data modeling.*
+* Analyzes query access patterns, sample documents, and proposed changes.
+* Produces decision-ready analyses: index recommendations, deep nesting warnings, migration risk matrices, and before-vs-after comparison signals.
+* Built with Next.js 14, TypeScript, TailwindCSS, Zod, and Vitest.
+
+### [**AI Data Hub**](https://www.mattshade.com/)
+*Interactive data catalog designed to help newsrooms and product teams discover internal AI/analytics data.*
+* Hosts 8 distinct datasets (editorial, social, streaming, commerce, etc.).
+* Equipped with Chart.js visualization, deep filters, search, and modular SharePoint-ready architecture.
