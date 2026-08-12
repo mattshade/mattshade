@@ -14,7 +14,7 @@
   <a href="https://www.mattshade.com">
     <img src="https://img.shields.io/badge/Portfolio-mattshade.com-0a0a0b?style=for-the-badge&labelColor=bef264&logoColor=0a0a0b" alt="Portfolio" />
   </a>
-  <a href="https://www.linkedin.com/in/matt-shade-66125515/">
+  <a href="https://www.linkedin.com/in/matthew-shade/">
     <img src="https://img.shields.io/badge/LinkedIn-0a0a0b?style=for-the-badge&logo=linkedin&logoColor=5ec4dc" alt="LinkedIn" />
   </a>
   <a href="mailto:hellomattshade@gmail.com">
@@ -75,23 +75,34 @@ I work as a **bridge person** between complex engineering, user-centered design,
 
 ## Career snapshot
 
-### NBCUniversal | Director of AI Engineering
-<sub><code style="color:#5ec4dc">Jul 2025 - Apr 2026</code> &middot; New York, NY</sub>
+### Versant | Director, AI Solutions Architecture
 
-- **AI Data Hub:** Interactive catalog of 8 major datasets with search, filters, Chart.js visualizations, and SharePoint-friendly deployment.
-- **Enablement &amp; adoption:** Custom GenAI agents plus licensing and utilization dashboards for leadership and teams.
+<sub><code style="color:#5ec4dc">Aug 2026 - Present</code> · New York, NY</sub>
+
+* Lead AI solutions architecture, turning business needs into practical AI-powered workflows, prototypes, and production-ready solutions.
+* Partner across business, product, design, and engineering to identify high-value AI opportunities and move them from concept to implementation.
+
+### NBCUniversal | Director of AI Engineering
+
+<sub><code style="color:#5ec4dc">Jul 2025 - Apr 2026</code> · New York, NY</sub>
+
+* **AI Data Hub:** Interactive catalog of 8 major datasets with search, filters, Chart.js visualizations, and SharePoint-friendly deployment.
+* **Enablement & adoption:** Custom GenAI agents plus licensing and utilization dashboards for leadership and teams.
 
 ### NBCUniversal | Director of Engineering, NBC News Group Digital
-<sub><code style="color:#5ec4dc">Oct 2021 - Jul 2025</code> &middot; New York, NY</sub>
 
-- Scaled multi-disciplinary teams with strong retention and developer growth.
-- Modernized stacks around React, TypeScript, and CI/CD while retiring legacy systems.
+<sub><code style="color:#5ec4dc">Oct 2021 - Jul 2025</code> · New York, NY</sub>
 
-### CNBC | Tech Lead &amp; Senior Interactive Designer
-<sub><code style="color:#5ec4dc">Jan 2007 - Oct 2021</code> &middot; Englewood Cliffs, NJ</sub>
+* Scaled multi-disciplinary teams with strong retention and developer growth.
+* Modernized stacks around React, TypeScript, and CI/CD while retiring legacy systems.
 
-- Led subscription and interactive visualization systems stable through peak market volatility.
-- Introduced prototype-driven discovery and standardized UX across digital products.
+### CNBC | Tech Lead & Senior Interactive Designer
+
+<sub><code style="color:#5ec4dc">Jan 2007 - Oct 2021</code> · Englewood Cliffs, NJ</sub>
+
+* Led subscription and interactive visualization systems stable through peak market volatility.
+* Introduced prototype-driven discovery and standardized UX across digital products.
+
 
 ---
 
