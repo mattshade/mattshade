@@ -184,7 +184,7 @@ Design/AI   : Figma, Photoshop, Illustrator, Cursor, Copilot, Gemini, ChatGPT
   <a href="https://www.mattshade.com">mattshade.com</a>
   &nbsp;&middot;&nbsp;
   <img src="https://raw.githubusercontent.com/mattshade/mattshade/main/assets/icons/linkedin.svg" width="16" alt="" />
-  <a href="https://www.linkedin.com/in/matt-shade-66125515/">LinkedIn</a>
+  <a href="https://www.linkedin.com/in/matthew-shade/">LinkedIn</a>
   &nbsp;&middot;&nbsp;
   <img src="https://raw.githubusercontent.com/mattshade/mattshade/main/assets/icons/mail.svg" width="16" alt="" />
   <a href="mailto:hellomattshade@gmail.com">hellomattshade@gmail.com</a>
